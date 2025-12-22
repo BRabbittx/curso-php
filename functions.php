@@ -2,7 +2,11 @@
 
   declare(strict_types=1);
 
-  const API_URL = "https://whenisthenextmcufilm.com/api";  
+  function render_template(string $template, array $data=[]) 
+  {
+    extract($data);
+    require "templates/$template.php";
+  }
 
   function get_data(string $url): array
   {
@@ -20,4 +24,4 @@
       $days < 30    => "Este mes se estrena",
       default       => "$days días hasta el estreno",
     };
-  }
+  } 
