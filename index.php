@@ -13,8 +13,8 @@
   ));
 
   render_template('styles');
-?>  
-
+  
+?>
 
 
 
